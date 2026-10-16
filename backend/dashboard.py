@@ -16,7 +16,7 @@ st.markdown("""
 st.title("🛡️ DroneDrishti: Military After-Action Review (AAR)")
 st.caption("Command-Level Readiness & Skill-Gap Analytics Platform")
 
-API_URL = "https://dronedrishti-backend.onrender.com/"
+API_URL = "https://dronedrishti-backend.onrender.com/api/results"
 
 def get_data():
     try:
