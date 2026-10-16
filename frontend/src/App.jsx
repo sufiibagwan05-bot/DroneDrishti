@@ -149,7 +149,7 @@ export default function App() {
     setDrones((prev) => prev.filter((d) => d.id !== id));
 
     try {
-      const response = await fetch("https://dronedrishti-backend.onrender.com/", {
+      const response = await fetch("https://dronedrishti-backend.onrender.com/api/score", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
