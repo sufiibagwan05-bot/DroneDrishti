@@ -34,6 +34,9 @@ st.sidebar.header("🎯 Unit & Trainee Filters")
 if len(raw_data) > 0:
     df_all = pd.DataFrame(raw_data)
     
+    # Yahan add krni hai ye line:
+    df_all['timestamp'] = pd.to_datetime(df_all['timestamp']).dt.tz_localize('UTC').dt.tz_convert('Asia/Kolkata')
+    
     units = ["All Units"] + sorted(list(df_all['unit_id'].dropna().unique()))
     selected_unit = st.sidebar.selectbox("Filter by Unit", units)
     
